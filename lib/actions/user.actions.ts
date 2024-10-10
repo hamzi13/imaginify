@@ -1,4 +1,3 @@
-
 "use server";
 
 import { revalidatePath } from "next/cache";
@@ -9,17 +8,20 @@ import { handleError } from "../utils";
 
 // CREATE
 export async function createUser(user: CreateUserParams) {
+  console.log("createUser function called with:", user);
   try {
     await connectToDatabase();
+    console.log("Database connection established");
 
     const newUser = await User.create(user);
+    console.log("User created successfully:", newUser);
 
     return JSON.parse(JSON.stringify(newUser));
   } catch (error) {
+    console.error("Error during user creation:", error);
     handleError(error);
   }
 }
-
 // READ
 export async function getUserById(userId: string) {
   try {

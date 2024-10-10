@@ -6,11 +6,11 @@ export interface IImage extends Document {
     title: string;
     transformationType: string;
     publicId: string;
-    secureURL: URL;
+    secureURL: string;
     width?: number;
     height?: number;
     config?: object;
-    transformationURL?: URL;
+    transformationURL?: string;
     aspectRatio?: string;
     color?: string;
     prompt?: string;

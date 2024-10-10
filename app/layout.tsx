@@ -15,21 +15,21 @@ export const metadata: Metadata = {
   title: "Imaginify",
   description: "AI-powered image generator",
 };
-function Header() {
-  return (
-    <header>
+// function Header() {
+//   return (
+//     <header>
      
-      <SignedIn>
-        {/* Mount the UserButton component */}
-        <UserButton />
-      </SignedIn>
-      <SignedOut>
-        {/* Signed out users get sign in button */}
-        <SignInButton />
-      </SignedOut>
-    </header>
-  )
-}
+//       <SignedIn>
+//         {/* Mount the UserButton component */}
+//         <UserButton />
+//       </SignedIn>
+//       <SignedOut>
+//         {/* Signed out users get sign in button */}
+//         <SignInButton />
+//       </SignedOut>
+//     </header>
+//   )
+// }
 
 export default function RootLayout({
   children,
@@ -42,7 +42,7 @@ export default function RootLayout({
     }}>
       <html lang="en">
         <body className={cn("font-IBMPlex antialiased", IBMPlex.variable)}>
-          <Header/>
+          {/* <Header/> */}
           {children}
         </body>
       </html>
